@@ -1,18 +1,50 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
 
-# Other files and folders
-.settings/
+---
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+### 📄 `.gitignore`
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+```gitignore
+# ═══════════════════════════════════════════════════════════════════
+# NEXUS CARGO — .gitignore
+# ═══════════════════════════════════════════════════════════════════
+
+# --- RUST ---
+target/
+**/*.rs.bk
+*.pdb
+Cargo.lock
+
+# --- BINAIRES DE BUILD ---
+nxc
+nexus-cargo
+*.elf
+*.bin
+
+# --- PROJETS DE DÉMO (Créés par le script) ---
+demo-hello/
+demo-hello/target/
+
+# --- LOGS & TEMP ---
+*.log
+logs/
+tmp/
+temp/
+
+# --- OS & EDITORS ---
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+.vs/
+*.sublime-workspace
+*.sublime-project
+
+# --- SECRETS ---
+.env
+.env.local
+*.pem
+*.key
+*.crt
+secrets.json
